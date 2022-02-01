@@ -1,0 +1,24 @@
+<div class="four wide column center align votes">
+    <div class="ui statistic">
+        <div class="value">{{ article?.votes }}</div>
+        <div class="points">Points</div>
+    </div>
+</div>
+
+<div class="twelve wide column">
+    <a href="#" class="ui large header">{{ article?.title }}</a>
+    <div class="meta">{{ article?.domain() }}</div>
+
+    <ul class="ui big horizontal list voters">
+        <li class="item">
+            <a href="javascript:void(0)" title="Add vote" (click)="article?.addVote()">
+                <i class="arrow up icon"></i>
+            </a>
+        </li>
+        <li class="item">
+            <a href="javascript:void(0)" title="Remove vote" (click)="article?.removeVote()">
+                <i class="arrow down icon"></i>
+            </a>
+        </li>
+    </ul>
+</div>
